@@ -1,0 +1,35 @@
+Project: Homomorphic Signatures on Polynomial Functions
+=================================================================
+
+  Install:
+    Two libraries were used in this implementation, which are 
+    displayed below.  In order to install, move the included 
+    directories into the desired place, and then edit the 
+    commented portions in the make file to insert the directory 
+    of these libraries:
+      1. NTL Library (Number Theory Library)
+      2. Botan (for hash function)
+
+  Formats:
+    Two types of files require specific formats when read into
+    the program:
+  
+    1. The encoded function has the following form:
+       c_0 + c_1x^n + c_2x^n-1y + c_3x*n-1z ... c_
+       
+       and our "encoded function" is simply a list of
+       these c_i in order, spaced apart.  Note that c_i
+       must be within proper bounds of [-y/2, y/2]. 
+    
+    2. The set of data points that you feed into the
+       system must first have a tag (interpreted as 
+       a string) and then integer values following
+       that.  Example:
+      
+       grades
+       123
+       23123
+       234
+         
+
+If you have any questions about this implementation, email me at jjong at stanford dot edu.
