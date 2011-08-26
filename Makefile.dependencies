@@ -1,0 +1,4 @@
+setup.o: setup.cc
+sign.o: sign.cc
+verify.o: verify.cc
+evaluate.o: evaluate.cc

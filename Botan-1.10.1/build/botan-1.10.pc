@@ -1,0 +1,12 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include/botan-1.10
+
+Name: Botan
+Description: Multi-platform C++ crypto library
+Version: 1.10.1
+
+Libs: -L${libdir} -lbotan-1.10
+Libs.private: -ldl -lpthread -lrt
+Cflags: -I${includedir}
